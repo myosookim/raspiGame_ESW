@@ -43,12 +43,9 @@ class Joystick:
         self.button_C = DigitalInOut(board.D4)
         self.button_C.direction = Direction.INPUT
 
-        # Turn on the Backlight
         self.backlight = DigitalInOut(board.D26)
         self.backlight.switch_to_output()
         self.backlight.value = True
 
-        # Create blank image for drawing.
-        # Make sure to create image with mode 'RGB' for color.
         self.width = self.disp.width
         self.height = self.disp.height

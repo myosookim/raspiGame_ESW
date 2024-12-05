@@ -1,7 +1,7 @@
 from PIL import ImageChops, Image
 import time
 
-# 파스텔 색상
+# 파스텔 색들 (흰색, 빨강, 노랑, 연두, 하늘, 보라)
 pastel_colors = [
     (255, 255, 255),
     (255, 182, 182),

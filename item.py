@@ -2,7 +2,7 @@ from PIL import Image
 import random
 import numpy as np
 
-
+# 회복 아이템
 class HealItem:
     def __init__(self, width, speed):
         x = random.randint(0, width - 15)
@@ -22,6 +22,7 @@ class HealItem:
             player.hp += 1
         return score
 
+# 쉴드 아이템
 class ShieldItem:
     def __init__(self, width, speed):
         x = random.randint(0, width - 15)
@@ -40,6 +41,7 @@ class ShieldItem:
         player.change_state("shielded", "player_raspi_shielded.png", 3)
         return score
 
+# 속도 아이템
 class SpeedItem:
     def __init__(self, width, speed):
         x = random.randint(0, width - 15)
@@ -58,6 +60,7 @@ class SpeedItem:
         player.change_state("fast", "player_raspi_fast.png", 3)
         return score
 
+# 점수 증가 아이템
 class ScoreItem:
     def __init__(self, width, speed):
         x = random.randint(0, width - 15)
